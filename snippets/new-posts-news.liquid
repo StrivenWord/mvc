@@ -1,0 +1,15 @@
+{% comment %}
+  Code based on tutorial: http://morning.am/tutorials/shopify-tutorial-add-recent-posts-blog/
+{% endcomment %}
+<h2 class="feed__heading">{{blogs['news'].title}}</h2>
+<ul class="feed__list">
+{% for article in blogs.news.articles limit: 5 %}
+  <li>
+    <a href="{{article.url}}">{{article.title}}</a>
+    <span class="large--right medium--right feed__date">
+	    <span class="feed__date__day">{{article.created_at | date: "%b. %d"}}</span>
+	    <span class="feed__date__year">{{article.created_at | date: "%Y"}}</span>
+	  </span>
+  </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,13 @@
+<div class="grid">
+
+  {% comment %}
+    This interactive slider should contain conditional code to load a different pictures and different explanatory messages on each page.
+  {% endcomment %}
+
+  {% if page.title == 'Maps' or 'Blog' or 'Company' %}
+  <div class="grid__item">
+    {% include 'mv-slideshow' %}
+  </div>
+  {% endif %}
+
+</div>

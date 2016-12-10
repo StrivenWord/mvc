@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 527.46946 737.60001">
+    <defs>
+        <filter id="a" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="5" result="result1"/>
+            <feColorMatrix result="result10" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5 -4"/>
+            <feComposite operator="atop" in="result10" in2="result10" result="result8"/>
+            <feComposite operator="in" result="fbSourceGraphic" in="result1" in2="result8"/>
+            <feGaussianBlur result="result0" in="fbSourceGraphic" stdDeviation="5"/>
+            <feSpecularLighting specularExponent="55" specularConstant="2.5" surfaceScale="2" lighting-color="#fff" result="result1" in="result0">
+                <feDistantLight azimuth="225" elevation="60"/>
+            </feSpecularLighting>
+            <feComposite operator="in" result="result2" in="result1" in2="fbSourceGraphic"/>
+            <feComposite k3="1" k2="1" operator="arithmetic" result="result4" in="fbSourceGraphic" in2="result2"/>
+            <feComposite operator="in" in2="result4" result="result9"/>
+            <feBlend mode="multiply" in="result9" in2="result9"/>
+        </filter>
+    </defs>
+    <path d="M389.54 901.574l-132.467-705-144.348 713.024m439.158.604L459.23 400.574 383.6 897.45" transform="matrix(.86133 0 0 .86133 -59.267 -107.848)" fill="none" stroke="#3b1043" stroke-width="37.052" filter="url(#a)"/>
+    <path d="M275.42 661.515c45.9-184.71 118.423-451.767 172.987-605.522h73.44s-27.464 26.14-32.582 39.208C412.24 291.886 275.42 685.255 275.42 685.255L49.137 95.2 15.73 55.994h80.518c58.345 183.742 141.46 446.802 179.17 605.522z" font-size="1027.276" font-family="PT Sans" font-weight="400" letter-spacing="6.849" word-spacing="0" fill="#691700" stroke-width="2.322"/>
+    <path d="M523.93 58.58s-30.05 24.747-33.233 33.233c-3.182 8.485-25.28 65.23-25.28 65.23l-15.556 41.72-24.57 66.114-24.396 67.175-10.783 29.7-10.252 28.813-12.867 35.545s-24.432 68.93-25.846 72.112c-1.414 3.182-2.652 8.132-2.652 8.132l-12.905 36.24-28.99 82.554-21.177 60.106-48.12-125.69-49.675-129.047-12.374-32.35-14.495-38.007-14.32-37.477-29.874-77.605-38.713-100.94-18.385-47.552-32.05-38.19" fill="none" stroke="#064c72" stroke-width="7" stroke-linecap="round"/>
+    <path d="M278.29 666.37c7.553-47.283 10.85-97.143 5.602-133.584-9.716-67.47-34.163-131.214-34.14-204.92.027-78.346 28.154-139.42 131.03-217.625 20.804-15.812-33.67-39.687-98.747-55.554 31.09 17.95 60.883 31.88 49.346 41.774-98.2 84.22-123.055 153.585-120.07 220.405 2.553 57.103 19.936 80.35 43.47 173.423 13.047 51.59 24.392 122.954 20.358 186.792" fill="#064c72" fill-rule="evenodd"/>
+</svg>

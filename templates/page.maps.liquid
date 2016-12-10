@@ -1,0 +1,35 @@
+<header class="section-header">
+  <h1 class="section-header__title">{{ page.title }}</h1>
+</header>
+
+{% comment %}
+  Regular page content goes here.
+{% endcomment %}
+<div class="rte">
+  {{ page.content }}
+</div>
+
+<div class="grid">
+	<div class="grid__item__nm--wrap" id="historic-map">
+		<img src={{ 'nys-early-map_960w.jpg' | asset_url }}>
+	</div>
+</div>
+
+{% comment %}
+  In order to get two editable content sections in the same page, we need to reference a different page's handle here.
+  Solution source: https://designspike.com/blog/shopify-provide-your-client-with-multiple-content-regions-within-a-page-template/
+{% endcomment %}
+{% capture map_page_2nd_content_handle %}{{ page.handle | append: '-mapcontent' }}{% endcapture %}
+<div class="rte">
+  {{ pages[map_page_2nd_content_handle].content }}
+</div>
+
+<div class="grid__item__nm--wrap">
+  <div id="mapid"></div>
+</div>
+
+<style>
+	#mapid {
+		height: 300px;
+	}
+</style>

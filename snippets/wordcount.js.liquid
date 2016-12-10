@@ -1,0 +1,10 @@
+console.log ("---------- Wordcount ----------");
+
+// new RegExp('\s\-', 'wordseparator');
+// console.log("Regex: "+wordseparator);
+
+var field = $('.rte');
+var chars = field.text().length + '';
+console.log("Total characters in CMS-submitted content: "+chars);
+var words = chars.split(' ').length;
+console.log("Number of words: "+words);

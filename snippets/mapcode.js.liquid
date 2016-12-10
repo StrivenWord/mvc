@@ -1,0 +1,241 @@
+var mymap = L.map('mapid').setView([43, -74.75], 10);
+
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  maxZoom: 18,
+}).addTo(mymap);
+
+var subheadingMarket = "<h5>Farmers’ Market</h5>";
+
+var amsterdamContent =
+    "<div class='map_infowindow-content' id='mapinfo_amsterdam'>" +
+    "<h4>Amsterdam</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>Route 30</span>" +
+    "<span class='mapinfo_address'>St Mary’s Healthcare</span>" +
+    "<span class='mapinfo_details'>Wednesdays, mid-May through mid-October</span>"+
+    "<span class='mapinfo_details'>3:00 - 6:00</span>"+
+    "</div>";
+    
+var cobleskillContent =
+    "<div class='map_infowindow-content' id='mapinfo_cobleskill'>" +
+    "<h4>Cobleskill</h4>" +
+    subheadingMarket +
+    "</div>";
+    
+var cooperstownContent =
+    "<div class='map_infowindow-content' id='mapinfo_cooperstown'>" +
+    "<h4>Cooperstown</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>101 Main St</span>" +
+    "<span class='mapinfo_details'>Phone contact: (607)547-8881</span>"+
+    "</div>";
+
+var dolgevilleContent =
+    "<div class='map_infowindow-content' id='mapinfo_dolgeville'>" +
+    "<h4>Dolgeville</h4>" +
+    subheadingMarket +
+    "</div>";
+
+var frankfortContent =
+   "<div class='map_infowindow-content' id='mapinfo_frankfort'>" +
+   "<h4>Frankfort</h4>" +
+   subheadingMarket +
+   "</div>";
+
+var fortplainContent =
+    "<div class='map_infowindow-content' id='mapinfo_fortplain'>" +
+    "<h4>Fort Plain</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>12 Willet St</span>" +
+    "<span class='mapinfo_details'>Thursdays, May through November</span>"+
+    "<span class='mapinfo_details'>1:00 - 5:00</span>"+
+    "<span class='mapinfo_details'>Phone contact: (518)993-4271</span>"+
+    "</div>";
+
+var gloversvilleContent =
+    "<div class='map_infowindow-content' id='mapinfo_dolgeville'>" +
+    "<h4>Dolgeville</h4>" +
+    subheadingMarket +
+    "</div>";
+
+  var herkimerContent =
+      "<div class='map_infowindow-content' id='mapinfo_herkimer'>" +
+    "<h4>Herkimer</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>420 German St</span>" +
+    "<span class='mapinfo_details'>1:00 - 5:00</span>"+
+    "<span class='mapinfo_details'>Phone contact: (315)895-0138</span>"+
+    "</div>";
+    
+var ilionContent =
+    "<div class='map_infowindow-content' id='mapinfo_ilion'>" +
+    "<h4>Ilion</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>City Park</span>" +
+    "<span class='mapinfo_address'>W. Main St</span>" +
+    "<span class='mapinfo_details'>Tuesdays, mid May through mid October</span>"+
+    "<span class='mapinfo_details'>3:00 - 6:00</span>"+
+    "</div>";
+    
+var johnstownContent =
+    "<div class='map_infowindow-content' id='mapinfo_johnstown'>" +
+    "<h4>Johnstown</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>City Park</span>" +
+    "<span class='mapinfo_address'>W. Main St</span>" +
+    "<span class='mapinfo_details'>Tuesdays, mid May through mid October</span>"+
+    "<span class='mapinfo_details'>3:00 - 6:00</span>"+
+    "</div>";
+
+var littlefallsContent =
+    "<div class='map_infowindow-content' id='mapinfo_littlefalls'>" +
+    "<h4>Little Falls</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>505 E. Main St & Albany St</span>" +
+    "<span class='mapinfo_details'>May through October</span>"+
+    "<span class='mapinfo_details'>Phone contact: (315)866-2619</span>"+
+    "</div>";
+
+var mohawkContent =
+    "<div class='map_infowindow-content' id='mapinfo_mohawk'>" +
+    "<h4>Mohawk</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>Weller Park</span>" +
+    "<span class='mapinfo_details'>41 W. Main St</span>"+
+    "<span class='mapinfo_details'>Phone contact: (315)866-1671</span>"+
+    "</div>";
+
+var middleburghContent =
+		"<div class='map_infowindow-content' id='mapinfo_middleburgh'>" +
+    "<h4>Middleburgh</h4>" +
+    subheadingMarket +
+    "</div>";
+    
+var richfieldspringsContent =
+    "<div class='map_infowindow-content' id='mapinfo_richfieldsprings'>" +
+    "<h4>Richfield Springs</h4>" +
+    subheadingMarket +
+    "<span class='mapinfo_address'>Spring Park</span>" +
+    "<span class='mapinfo_address'>E. Main St</span>"+
+    "<span class='mapinfo_details'>Thursdays -- 2:00 - 6:00</span>"+
+    "<span class='mapinfo_details'>Saturdays -- 8:00 - 1:00</span>"+
+    "<span class='mapinfo_details'>Phone contact: (315)858-2703</span>"+
+    "</div>";
+
+var schoharieContent = 
+   "<div class='map_infowindow-content' id='mapinfo_schoharie'>" +
+   "<h4>Schoharie</h4>" +
+   subheadingMarket +
+   "</div>";
+
+var sharonspringsContent =
+		"<div class='map_infowindow-content' id='mapinfo_sharonsprings'>" +
+		"<h4>Sharon Springs</h4>" +
+		subheadingMarket +
+		"</div>";
+
+var amsterdamMarker = L.divIcon({className: 'map-marker'});
+var amsterdam = L.marker([42.938135, -74.196020], 
+  {icon: amsterdamMarker})
+    .addTo(mymap)
+    .bindPopup(amsterdamContent)
+    .openPopup();
+
+var cobleskillMarker = L.divIcon({className: 'map-marker'});
+var cobleskill = L.marker([42.678032, -74.486441], 
+  {icon: cobleskillMarker})
+    .addTo(mymap)
+    .bindPopup(cobleskillContent)
+    .openPopup();
+
+var dolgevilleMarker = L.divIcon({className: 'map-marker'});
+var dolgeville = L.marker([43.101257, -74.775758], 
+  {icon: dolgevilleMarker})
+    .addTo(mymap)
+    .bindPopup(dolgevilleContent)
+    .openPopup();
+
+var fortplainMarker = L.divIcon({className: 'map-marker'});
+var fortplain = L.marker([42.931531, -74.624479], 
+  {icon: fortplainMarker})
+    .addTo(mymap)
+    .bindPopup(fortplainContent)
+    .openPopup();
+
+var frankfortMarker = L.divIcon({className: 'map-marker'});
+var frankfort = L.marker([43.039028, -75.073215], 
+  {icon: frankfortMarker})
+    .addTo(mymap)
+    .bindPopup(frankfortContent)
+    .openPopup();
+
+var gloversvilleMarker = L.divIcon({className: 'map-marker'});
+var gloversville = L.marker([43.052938, -74.349578], 
+{icon: gloversvilleMarker})
+    .addTo(mymap)
+    .bindPopup(gloversvilleContent)
+    .openPopup(); // Gloversville Building
+
+var herkimerMarker = L.divIcon({className: 'map-marker'});
+var herkimer = L.marker([43.025572, -74.988697], 
+{icon: herkimerMarker})
+    .addTo(mymap)
+    .bindPopup(herkimerContent)
+    .openPopup(); // First United Methodist Church
+
+var ilionMarker = L.divIcon({className: 'map-marker'});
+var ilion = L.marker([43.015153, -75.036674], 
+  {icon: ilionMarker})
+    .addTo(mymap)
+    .bindPopup(ilionContent)
+    .openPopup();
+
+var johnstownMarker = L.divIcon({className: 'map-marker'});
+var johnstown = L.marker([43.006635, -74.372706], 
+{icon: johnstownMarker})
+    .addTo(mymap)
+    .bindPopup(johnstownContent)
+    .openPopup(); // Roth School of Art
+
+var littlefallsMarker = L.divIcon({className: 'map-marker'});
+var littlefalls = L.marker([43.043295, -74.859448], 
+  {icon: littlefallsMarker})
+    .addTo(mymap)
+    .bindPopup(littlefallsContent)
+    .openPopup();
+
+var middleburghMarker = L.divIcon({className: 'map-marker'});
+var middleburgh = L.marker([42.598604, -74.332736], 
+{icon: middleburghMarker})
+  .addTo(mymap)
+  .bindPopup(middleburghContent)
+  .openPopup(); // Middleburgh Town Planning
+
+var mohawkMarker = L.divIcon({className: 'map-marker'});
+var mohawk = L.marker([43.011595, -75.005584], 
+  {icon: mohawkMarker})
+    .addTo(mymap)
+    .bindPopup(mohawkContent)
+    .openPopup();
+
+var richfieldspringsMarker = L.divIcon({className: 'map-marker'});
+var richfieldsprings = L.marker([42.853650, -74.987130], 
+  {icon: richfieldspringsMarker})
+    .addTo(mymap)
+    .bindPopup(richfieldspringsContent)
+    .openPopup();
+
+var schoharieMarker = L.divIcon({className: 'map-marker'});
+var schoharie = L.marker([42.665957, -74.312538], 
+  {icon: schoharieMarker})
+    .addTo(mymap)
+    .bindPopup(schoharieContent)
+    .openPopup();
+
+var sharonspringsMarker = L.divIcon({className: 'map-marker'});
+var sharonsprings = L.marker([42.795893, -74.618994], 
+  {icon: sharonspringsMarker})
+    .addTo(mymap)
+    .bindPopup(sharonspringsContent)
+    .openPopup();

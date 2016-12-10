@@ -1,0 +1,54 @@
+<header class="section-header">
+  <h1 class="section-header__title">{{ page.title }}</h1>
+</header>
+
+<div class="grid--full">
+	<p>Make yourself a cup of your favorite beverage and read up on helpful resources provided by people from your Valley.</p>
+</div>
+
+<div class="grid--full">
+	<div class="grid__item large--one-third medium--one-whole small--one-whole">
+		<div class="grid feed">
+			<div class="medium--left">
+				<div class="insertion-svg helper-margincenter">
+					{% include 'news-ampersand.svg' %}
+				</div>
+			</div>
+			<div class="medium--right">
+				{% include 'new-posts-news' %}
+			</div>
+		</div>
+	</div>
+	<div class="grid__item large--one-third medium--one-whole small--one-whole">
+			<div class="grid feed">
+				<div class="medium--left">
+					<div class="insertion-svg helper-margincenter">
+						{% include 'eating-cookie.svg' %}
+					</div>
+				</div>
+				<div class="medium--right">
+					{% include 'new-posts-food' %}
+				</div>
+			</div>
+	</div>
+	<div class="grid__item large--one-third medium--one-whole small--one-whole">
+		<div class="grid feed">
+			<div class="medium--left">
+				<div class="insertion-svg helper-margincenter">
+					{% include 'health-heart.svg' %}
+				</div>
+			</div>
+			<div class="medium--right">
+				{% include 'new-posts-health' %}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% comment %}
+  Regular page content goes here.
+{% endcomment %}
+<div class="rte">
+  {{ page.content }}
+</div>

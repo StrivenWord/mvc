@@ -1,0 +1,34 @@
+console.log ("---------- Wordcount ----------");
+
+// new RegExp('\s\-', 'wordseparator');
+// console.log("Regex: "+wordseparator);
+
+// var wordseparator = "/^\s+$/";
+
+var field = $('.rte');
+console.log("Value of field :" + field);
+var chars = field.text().length + '';
+
+var char_count = field.val().length();
+console.log("Value of char_count: "+char_count);
+var word_count = field.val().split(' ').length;
+console.log("Value of word_count: "+word_count);
+
+
+// console.log("Total characters in CMS-submitted content: "+chars);
+// var words = chars.split(/^\s+$/);
+
+// function CountWords(words) {
+// 	var wordseparator = words.match(/\S+/g);
+// 	return {
+// 		charcount: words.length,
+// 		wordcount: wordseparator ? wordseparator.length : 0
+// 	}
+// }
+
+// console.log(field.value);
+
+// var wordobject = CountWords($('.rte').value);
+
+// console.log("Wordcount: "+wordcount);
+// console.log("Charcount: "+charcount);
